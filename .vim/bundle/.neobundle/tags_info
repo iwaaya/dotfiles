@@ -1,2 +1,5 @@
+molokai
 neobundle.vim
 nerdtree
+vim-go
+vim-indent-guides
