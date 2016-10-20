@@ -55,4 +55,11 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
+" auto comment off
+augroup auto_comment_off
+     autocmd!
+         autocmd BufEnter * setlocal formatoptions-=r
+             autocmd BufEnter * setlocal formatoptions-=o
+             augroup END
+
 nnoremap <silent><C-e> :NERDTree<CR>
