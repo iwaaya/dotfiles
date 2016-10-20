@@ -10,3 +10,7 @@ git submodule update
 # vim
 ln -sf $DIR/.vim ~/.vim
 ln -sf $DIR/.vim/.vimrc ~/.vimrc
+
+# tmux
+sudo yum install tmux
+ln -sf $DIR/tmux.conf ~/.tmux.conf
