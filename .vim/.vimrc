@@ -37,6 +37,8 @@ set showmatch "括弧入力時の対応する括弧を表示
 syntax on "コードの色分け
 set tabstop=4 "インデントをスペース4つ分に設定
 set smartindent "オートインデント
+set shiftwidth=4
+set expandtab
 
 "#####検索設定#####
 set ignorecase "大文字/小文字の区別なく検索する
@@ -50,8 +52,8 @@ let g:rehash256 = 1
 
 " indent-guides
 let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=110
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=gray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=darkgray
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 
@@ -63,3 +65,4 @@ augroup auto_comment_off
              augroup END
 
 nnoremap <silent><C-e> :NERDTree<CR>
+hi Comment ctermfg=yellow
