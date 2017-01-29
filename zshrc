@@ -1,11 +1,17 @@
 autoload -U compinit && compinit
 
 # prompt
-PROMPT='[%n@%m%~$'
+PROMPT='%F{yellow}[%n@%m]%F{green}%~%F{blue}$ '
 
 # alias
 alias ls='ls -G'
 alias vim='split_vim $1'
+
+# go
+export GOPATH=$HOME/.go
+export GOROOT=/usr/local/go
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$GOROOT/bin:$PATH"
 
 # --- function -----------------------------------------------------------------------------------------
 
