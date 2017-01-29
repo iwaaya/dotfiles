@@ -3,15 +3,9 @@ autoload -U compinit && compinit
 # prompt
 PROMPT='[%n@%m%~$'
 
-# rbenv
-eval "$(rbenv init -)"
-
 # alias
 alias ls='ls -G'
 alias vim='split_vim $1'
-
-
-
 
 # --- function -----------------------------------------------------------------------------------------
 
