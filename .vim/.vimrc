@@ -18,7 +18,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'fatih/vim-go'
-NeoBundle 'tomasr/molokai'
+NeoBundle 'altercation/vim-colors-solarized'
 
 call neobundle#end()
 
@@ -44,10 +44,9 @@ set ignorecase "大文字/小文字の区別なく検索する
 set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
 set wrapscan "検索時に最後まで行ったら最初に戻る
 
-" molokai
-colorscheme molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
+" colorscheme
+colorscheme solarized
+set background=dark
 
 " indent-guides
 let g:indent_guides_auto_colors=0
