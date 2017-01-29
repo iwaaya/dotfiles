@@ -18,7 +18,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'fatih/vim-go'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tomasr/molokai'
 
 call neobundle#end()
