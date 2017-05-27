@@ -34,8 +34,8 @@ set number "行番号を表示する
 set title "編集中のファイル名を表示
 set showmatch "括弧入力時の対応する括弧を表示
 syntax on "コードの色分け
-set tabstop=4 "インデントをスペース4つ分に設定
-set smartindent "オートインデント
+set tabstop=4
+set autoindent "オートインデント
 set shiftwidth=4
 set expandtab
 
@@ -47,13 +47,6 @@ set wrapscan "検索時に最後まで行ったら最初に戻る
 " colorscheme
 colorscheme solarized
 set background=dark
-
-" indent-guides
-let g:indent_guides_auto_colors=0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=gray
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=darkgray
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
 
 " auto comment off
 augroup auto_comment_off
