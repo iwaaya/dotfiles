@@ -1,11 +1,17 @@
 autoload -U compinit && compinit
 
+# historyの共有
+setopt share_history
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
 # prompt
 PROMPT='%F{yellow}[%n@%m]%F{green}%~%F{blue}$ '
 
 # alias
 alias ls='ls -G'
-alias vim='split_vim $1'
+alias vims='split_vim $1'
 
 # go
 export GOPATH=$HOME/.go
@@ -28,8 +34,6 @@ function split_vim() {
     if [ $? = 0 ] && [ $COLUMNS -ge 120 ];
     then
         tmux split-window -h -p 70 "vim $1"
-    else
-        vim $1
     fi
 }
 
