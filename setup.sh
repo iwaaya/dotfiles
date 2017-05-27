@@ -14,3 +14,9 @@ ln -sf $DIR/.vim/.vimrc ~/.vimrc
 # tmux
 sudo yum install tmux
 ln -sf $DIR/tmux.conf ~/.tmux.conf
+
+# zshrc
+if [ -e ~/.zshrc ]; then
+    rm ~/.zshrc
+fi
+ln -sf $DIR/zshrc ~/.zshrc
