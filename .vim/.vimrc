@@ -19,6 +19,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'NLKNguyen/papercolor-theme'
+NeoBundle 'simeji/winresizer'
 
 call neobundle#end()
 
@@ -44,9 +46,14 @@ set ignorecase "大文字/小文字の区別なく検索する
 set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
 set wrapscan "検索時に最後まで行ったら最初に戻る
 
+" 背景色をterminalの色と揃える
+" autocmd ColorScheme * highlight Normal ctermbg=none
+" autocmd ColorScheme * highlight LineNr ctermbg=none
+
 " colorscheme
-colorscheme solarized
-set background=dark
+set t_Co=256
+colorscheme PaperColor
+set background=light
 
 " auto comment off
 augroup auto_comment_off
@@ -56,4 +63,7 @@ augroup auto_comment_off
              augroup END
 
 nnoremap <silent><C-e> :NERDTree<CR>
-hi Comment ctermfg=yellow
+hi Comment ctermfg=darkred
+
+" for winresizer
+let g:winresizer_start_key = '<C-T>'
