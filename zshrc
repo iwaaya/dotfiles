@@ -37,6 +37,24 @@ function split_vim() {
     fi
 }
 
+# peco
+# http://qiita.com/uchiko/items/f6b1528d7362c9310da0
+function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | \
+        eval $tac | \
+        peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+le -N peco-select-history
+bindkey '^[x' peco-select-history # M-xに割り当て
+
 # tmuxの起動
 function is_exists() { type "$1" >/dev/null 2>&1; return $?; }
 function is_osx() { [[ $OSTYPE == darwin* ]]; }

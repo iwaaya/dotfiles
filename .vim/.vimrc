@@ -21,6 +21,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'NLKNguyen/papercolor-theme'
 NeoBundle 'simeji/winresizer'
+NeoBundle 'tcnksm/gotests', { 'rtp': 'editor/vim' }
 
 call neobundle#end()
 
